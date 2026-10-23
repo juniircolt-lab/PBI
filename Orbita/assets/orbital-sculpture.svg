@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1000" fill="none">
+<defs>
+<linearGradient id="chrome" x1="250" y1="200" x2="850" y2="750" gradientUnits="userSpaceOnUse"><stop stop-color="#090d18"/><stop offset=".18" stop-color="#3b3b56"/><stop offset=".26" stop-color="#d4c7e1"/><stop offset=".3" stop-color="#faf0fb"/><stop offset=".35" stop-color="#72637f"/><stop offset=".48" stop-color="#151b2a"/><stop offset=".7" stop-color="#030712"/><stop offset=".85" stop-color="#77607e"/><stop offset=".9" stop-color="#c8b9cb"/><stop offset="1" stop-color="#171d2c"/></linearGradient>
+<linearGradient id="edge" x1="300" y1="200" x2="1050" y2="750" gradientUnits="userSpaceOnUse"><stop stop-color="#e9d8f0"/><stop offset=".2" stop-color="#9a91b6"/><stop offset=".5" stop-color="#313246"/><stop offset=".75" stop-color="#a08aa4"/><stop offset="1" stop-color="#181e30"/></linearGradient>
+<linearGradient id="front" x1="450" y1="580" x2="950" y2="800" gradientUnits="userSpaceOnUse"><stop stop-color="#080c15"/><stop offset=".25" stop-color="#2e3146"/><stop offset=".45" stop-color="#bcb2cf"/><stop offset=".5" stop-color="#f4e2f7"/><stop offset=".56" stop-color="#8a7c9b"/><stop offset=".75" stop-color="#172131"/><stop offset="1" stop-color="#040a14"/></linearGradient>
+<radialGradient id="light"><stop stop-color="#e6bbf8" stop-opacity=".6"/><stop offset="1" stop-color="#b079d8" stop-opacity="0"/></radialGradient>
+<filter id="shadow" x="-50%" y="-100%" width="200%" height="300%"><feGaussianBlur stdDeviation="23"/></filter>
+<filter id="glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="35"/></filter>
+</defs>
+<ellipse cx="730" cy="450" rx="370" ry="310" fill="url(#light)" filter="url(#glow)"/>
+<ellipse cx="700" cy="827" rx="405" ry="32" fill="#030712" opacity=".7" filter="url(#shadow)"/>
+<g transform="translate(700 490) rotate(-23)"><ellipse rx="405" ry="167" stroke="#040815" stroke-width="74" transform="translate(0 22)"/><ellipse rx="405" ry="167" stroke="url(#chrome)" stroke-width="70"/><ellipse rx="405" ry="167" stroke="url(#edge)" stroke-width="2" transform="translate(0 -30)"/><ellipse rx="405" ry="167" stroke="#efddf9" stroke-opacity=".15" stroke-width="1" transform="translate(0 30)"/></g>
+<g transform="translate(715 525) rotate(38)"><ellipse rx="340" ry="138" stroke="#030916" stroke-width="49" transform="translate(0 17)"/><ellipse rx="340" ry="138" stroke="url(#front)" stroke-width="45"/><ellipse rx="340" ry="138" stroke="url(#edge)" stroke-width="1.3" transform="translate(0 -18)"/></g>
+<ellipse cx="870" cy="303" rx="85" ry="7" fill="#f5dcff" opacity=".16" filter="url(#shadow)"/>
+</svg>

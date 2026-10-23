@@ -1,42 +1,56 @@
-# Órbita V3 — visual e fluxo personalizável
+# Órbita V4 — menu e navegação fluida
 
-## Alterações
+## Resultado visual
 
-O dashboard ganhou uma composição editorial, tipografia ampla, fundo claro, menu escuro, destaque cítrico e ilustração orbital original em CSS que indica a proporção concluída. A base visual foi refinada a partir da estrutura do HTML da Oakley enviado pelo usuário: blocos editoriais, hero e destaque de títulos. O acesso direto ao site falhou com ERR_TUNNEL_CONNECTION_FAILED; não foi feita alegação de inspeção visual do site ao vivo. Nenhum script, imagem comercial, logotipo ou conteúdo de rastreamento do HTML anexado foi incorporado ao aplicativo. As imagens desta entrega são capturas do próprio Órbita; a ilustração não usa recursos externos.
+A referência usada foi o HTML já fornecido e, nesta revisão, as duas capturas enviadas pelo usuário. A versão anterior não correspondia à composição e ao movimento pedidos. Esta revisão substitui a barra lateral por cabeçalho branco horizontal, faixa superior em gradiente e um menu amplo com categorias à esquerda e dois painéis visuais à direita. O dashboard tem uma abertura de largura total, fundo escuro/violeta, escultura orbital original, título central e botão arredondado.
 
-Status, áreas, projetos e prioridades passaram a ser listas personalizáveis. Há atalhos + junto dos respectivos campos da tabela, no cartão junto da prioridade e acima dos cartões. Um novo status adiciona uma coluna. A seção Seu fluxo permite gerenciar nomes, cores e comportamentos dos status. Renomear atualiza atividades e filtros; excluir uma opção em uso é bloqueado.
+A escultura é um SVG local criado para o Órbita. A atmosfera, a flutuação, os efeitos de cursor/rolagem e os painéis do menu são CSS/JavaScript locais. Não foram copiados logotipo, fotos de produtos, imagens de pessoas ou scripts de comércio/rastreamento do site de referência. O aplicativo continua funcionando sem rede.
 
-Status se agrupam por comportamento pending/progress/done para preservar indicadores, calendário e datas automáticas. Datas existentes são mantidas; alterações com cronologia inválida são rejeitadas. Alterar o comportamento cadastrado não reescreve datas históricas.
+## Movimento implementado
 
-## Dados e compatibilidade
+- Abertura do menu com entrada lateral dos painéis e sequência das categorias; fechamento com saída suave.
+- Hover/foco nas categorias desloca o texto e a seta e atualiza o destaque visual.
+- Troca de páginas e visualizações com saída, entrada, deslocamento e desfoque breve por View Transitions. Interrupções respeitam a última navegação solicitada.
+- Alternativa por Web Animations quando View Transitions está indisponível.
+- Escultura com flutuação, resposta suave ao cursor e paralaxe de rolagem. Névoas e chamada de rolagem têm movimento discreto.
+- Indicadores revelados ao entrar na tela durante a rolagem.
+- Menu modal com foco contido, Escape, retorno ao acionador, bloqueio de rolagem de fundo e atalhos diretos para tabela/cartões/calendário.
+- Movimento reduzido acompanha a preferência do sistema. Cabeçalho, menu e navegação funcionam também no viewport estreito.
 
-Os dados continuam locais, na chave orbita-v1. schemaVersion permanece 1; settings.catalogs contém statuses (name, kind, color), areas, projects e priorities. Backups antigos recebem as listas correspondentes sem alterar tarefas, IDs, horários ou notas. Nomes antigos de projetos com diferenças de maiúsculas são preservados. A interface impede a criação de novas opções duplicadas, inclusive diferenças de caixa. Nomes encontrados nas atividades e filtros são preservados nas listas durante a importação.
+Filtros do dashboard podem ser abertos pelo ícone de ajustes do cabeçalho. A lupa abre a busca nas atividades. As listas personalizáveis, atalhos +, cores/comportamentos dos status, datas, notas, filtros e backups foram mantidos. Nenhum acesso aos dados do navegador do usuário foi feito.
 
-Exportação/importação de estilo manipula somente tema e cores, preservando as listas. Backups que usam novas categorias precisam desta versão ou posterior, pois versões antigas validam nomes fixos. Não houve acesso ao localStorage do computador do usuário; os testes usaram dados sintéticos em perfis separados. Os arquivos originais recebidos continuam fora da cópia de trabalho, intactos.
+## Verificações executadas
 
-## Resultado
+47 grupos passaram, sem exceções de JavaScript nas execuções finais:
 
-37 grupos de testes em Chromium real passaram:
+| Suíte | Grupos | Evidência |
+| --- | ---: | --- |
+| validacao.cjs | 13 | CRUD, datas/horários, teclado, filtros, cartões, calendário, prévia, backups, persistência e layout |
+| casos-adicionais.cjs | 11 | Fuso, calendário do dia 31, cronologia inválida, filtros salvos, temas, estilos, validação JSON, dashboard e falhas de armazenamento/pasta |
+| personalizacao-fluxo.cjs | 13 | Opções novas na tabela/cartões, filtros/formulário dinâmicos, renomeação, exclusão protegida, cores/comportamentos, backup/recarga, estilo e migração |
+| navegacao-fluida.cjs | 10 | Movimento efetivo, menu animado, foco/Escape, atalhos, animações de saída/entrada, cliques rápidos, destino dos painéis, fallback, movimento reduzido, rolagem, busca/filtros e navegação móvel |
 
-- validacao.cjs: 13 grupos de regressão de atividades, datas, teclado, filtros, arraste, calendário, aparência, backup, persistência e layout.
-- casos-adicionais.cjs: 11 grupos com fusos, navegação no dia 31, reversão de cronologia, filtros salvos, temas, estilos, validação de JSON, dashboard, API de pasta simulada e falhas de armazenamento.
-- personalizacao-fluxo.cjs: 13 grupos sobre o novo visual, criação inline de opções, duplicatas/cancelar, prioridades no cartão, colunas novas, filtros/formulários dinâmicos, renomeação sem perder dados, proteção de exclusão, cor/comportamento do status, backups/recarga, estilo sem perder categorias, migração e responsividade.
+As 37 verificações de regressão foram executadas com movimento reduzido, para isolar o comportamento de dados. As 10 novas verificações executaram a navegação com movimento real, verificaram animações em andamento e a mudança da transformação da escultura entre instantes diferentes. O teste de movimento reduzido foi explícito; o fallback foi testado removendo a API View Transitions apenas na página de testes.
 
-Nenhuma exceção de JavaScript capturada nas execuções finais. Logs completos: resultado-principal.txt, resultado-adicional.txt e resultado-fluxo.txt. Capturas desktop e estreitas acompanham a entrega. O ZIP foi verificado por integridade, extraído em outra pasta e submetido à verificação de abertura do dashboard e criação de opção; os hashes de todos os arquivos extraídos foram comparados ao manifesto.
+Uma expectativa da cor de fundo antiga foi atualizada para o novo fundo neutro; a mudança do tema do sistema continuou sendo verificada. Os logs completos estão nos arquivos resultado-*.txt.
+
+As capturas dashboard-desktop.png, dashboard-mobile.png, menu-desktop.png e menu-mobile.png são da versão final. O teste percorreu a rolagem antes das capturas completas para revelar os painéis. navegacao.webm é uma gravação real da execução; previa-animada.gif é um trecho convertido dessa gravação, sem simular a interface. A gravação usa dados sintéticos em perfil isolado.
+
+O ZIP final foi extraído em outra pasta, seus arquivos comparados ao manifesto SHA256 e a navegação pelo menu e a criação de uma opção verificadas nessa cópia.
+
+## Dados
+
+Storage e esquema da V3 foram preservados: chave local orbita-v1, schemaVersion 1 e listas em settings.catalogs. Dados antigos permanecem importáveis. Estilos não substituem categorias. Backups com status/áreas/prioridades personalizados precisam desta versão ou posterior. Nenhum backup pessoal real foi fornecido; os testes de migração usam dados sintéticos.
 
 ## Limites
 
-A aplicação foi testada por HTTP local em Chromium 154.0.8037.57, com Playwright 1.64.1, locale pt-BR e fuso America/Sao_Paulo. A política do navegador do ambiente bloqueia file://; a abertura por duplo clique não foi validada aqui. O seletor nativo de pasta não foi operado: os testes de gravação/cancelamento/falha usam uma implementação simulada da API. Não houve testes em celular físico, Safari, Firefox ou Edge. Não foi recebida uma exportação de dados pessoais reais para validar uma migração individual.
+Testado em Chromium 154.0.8037.57, Playwright 1.64.1, locale pt-BR e fuso America/Sao_Paulo, por HTTP local. A política do navegador bloqueia file://; a abertura por duplo clique não foi validada aqui. A pasta local foi exercitada por simulação da API, sem operar o seletor nativo. Tela estreita não equivale a aparelho físico. Não houve execução em Safari, Firefox ou Edge, nem avaliação de desempenho em aparelhos de baixo custo.
 
-Não há Google Drive, sincronização remota, contas ou servidor de dados. A disponibilização no GitHub serve para baixar o código e o ZIP e não recebe os dados digitados no aplicativo.
+O download do FFmpeg empacotado do Playwright foi negado pela política de rede. A gravação foi realizada com o FFmpeg já instalado no sistema, disponibilizado no diretório local de ferramentas de testes. Não foram usados artefatos do download que falhou nem desativadas verificações de rede/instalação.
 
-## Reproduzir
+## Reproduzir tecnicamente
 
-O aplicativo não exige instalação. Para os testes técnicos, use Python 3, Node.js e Chromium no caminho /usr/bin/chromium. O pacote Playwright é uma dependência dos testes, não do aplicativo.
-
-Na pasta Orbita, execute `python -m http.server 8770 --bind 127.0.0.1`.
-
-Em outro terminal:
+O aplicativo não exige instalação. Para os testes, use Python 3, Node.js, Chromium e Playwright 1.64.1. Na pasta Orbita, execute `python -m http.server 8770 --bind 127.0.0.1`.
 
 ```sh
 npm install --prefix /tmp/orbita-tools --cache /tmp/orbita-npm-cache playwright@1.64.1
@@ -45,4 +59,12 @@ NODE_PATH=/tmp/orbita-tools/node_modules node validacao/casos-adicionais.cjs
 NODE_PATH=/tmp/orbita-tools/node_modules node validacao/personalizacao-fluxo.cjs
 ```
 
-ORBITA_URL pode apontar para outro endereço HTTP local. Em outra plataforma, ajuste executablePath para o Chromium disponível. Os scripts gravam suas capturas na própria pasta de validação e usam contextos isolados de navegador.
+Para a suíte de movimento com gravação, instale o FFmpeg do Playwright pelo comando oficial `node /tmp/orbita-tools/node_modules/playwright/cli.js install ffmpeg`, ou use um FFmpeg do sistema já instalado. Neste ambiente foi usado:
+
+```sh
+mkdir -p /tmp/orbita-playwright/ffmpeg-1013
+ln -s /usr/bin/ffmpeg /tmp/orbita-playwright/ffmpeg-1013/ffmpeg-linux
+PLAYWRIGHT_BROWSERS_PATH=/tmp/orbita-playwright NODE_PATH=/tmp/orbita-tools/node_modules node validacao/navegacao-fluida.cjs
+```
+
+Os testes usam /usr/bin/chromium; ajuste executablePath em outras plataformas. ORBITA_URL pode apontar para outro servidor local. As capturas e a gravação são gravadas junto aos testes. A instalação de ferramentas de testes não faz parte do funcionamento do aplicativo para o usuário.

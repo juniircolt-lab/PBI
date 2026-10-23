@@ -1,0 +1,25 @@
+PASS Cabeçalho horizontal e fundo com movimento real
+PASS Menu animado, foco contido, Escape e retorno ao botão
+PASS Menu da referência e atalho direto para cartões
+PASS Transição nativa entre páginas, saída e entrada executadas
+PASS Cliques rápidos mantêm a última página e os dados
+PASS Painel visual do menu navega para a categoria destacada
+PASS Fallback sem View Transitions e abas sem perder atividades
+PASS Movimento reduzido desativa animações e mantém navegação
+PASS Revelação ao rolar, filtros e pesquisa pelo cabeçalho
+PASS Menu e navegação reais na tela estreita
+{
+  "checks": [
+    "Cabeçalho horizontal e fundo com movimento real",
+    "Menu animado, foco contido, Escape e retorno ao botão",
+    "Menu da referência e atalho direto para cartões",
+    "Transição nativa entre páginas, saída e entrada executadas",
+    "Cliques rápidos mantêm a última página e os dados",
+    "Painel visual do menu navega para a categoria destacada",
+    "Fallback sem View Transitions e abas sem perder atividades",
+    "Movimento reduzido desativa animações e mantém navegação",
+    "Revelação ao rolar, filtros e pesquisa pelo cabeçalho",
+    "Menu e navegação reais na tela estreita"
+  ],
+  "errors": []
+}

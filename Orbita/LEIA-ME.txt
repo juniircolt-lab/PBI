@@ -1,4 +1,4 @@
-ÓRBITA — V3 / SEU FLUXO
+ÓRBITA — V4 / EM MOVIMENTO
 
 COMO ABRIR
 Extraia o ZIP inteiro. Abra a pasta Orbita e depois index.html no Chrome ou Edge. Mantenha css e js junto do arquivo HTML.
@@ -6,8 +6,11 @@ Extraia o ZIP inteiro. Abra a pasta Orbita e depois index.html no Chrome ou Edge
 TRAZER SEUS DADOS
 Exporte um backup completo na versão anterior antes de trocar. Guarde esse JSON. Na nova versão, vá a Assistente e dados > Importar dados e preferências e selecione seu backup. Não há dados pessoais do seu navegador neste pacote.
 
-NOVO VISUAL
-Dashboard com composição editorial, tons escuros, destaque cítrico, tipografia ampla e um gráfico orbital original. Foi usada como referência a estrutura do HTML da Oakley enviado, sem copiar imagens, marca ou scripts do site. O gráfico orbital é local, não depende da internet e mostra a proporção de atividades concluídas.
+NOVO VISUAL E NAVEGAÇÃO
+A barra lateral foi substituída por cabeçalho horizontal. O botão de três linhas abre o menu amplo, com categorias à esquerda e painéis visuais à direita, seguindo a composição das imagens de referência fornecidas. Os painéis também são atalhos; Tabela, Cartões e Calendário podem ser abertos pelo próprio menu.
+O dashboard abre com um cenário escuro/violeta, escultura orbital original, título central e botão arredondado. A imagem responde suavemente ao cursor e à rolagem. Não há imagens ou scripts externos necessários para funcionar.
+As páginas e visualizações têm transições de saída e entrada. Em navegadores compatíveis, são usados View Transitions; nos demais, Web Animations. A preferência do sistema por reduzir movimento é respeitada. Para fechar o menu, use o X ou Escape.
+Os indicadores surgem suavemente durante a rolagem. Filtros do dashboard ficam disponíveis pelo ícone de ajustes no cabeçalho; a lupa abre a busca nas atividades.
 
 CRIAR OPÇÕES NA HORA
 Na tabela, use o + ao lado de status, área, projeto ou prioridade. Digite o nome e confirme; a opção fica disponível para todas as atividades e é aplicada à atividade atual. Para status, escolha também a cor e o comportamento.
@@ -27,4 +30,4 @@ Personalização: prévia separada; Aplicar salva; Cancelar descarta. Cores dos 
 Pasta local é opcional, requer reconectar ao reabrir e depende do navegador. Mantenha backups exportados. Não há integração Google Drive nem sincronização com GitHub.
 
 TESTES E LIMITES
-Os resultados e as capturas ficam em validacao. Os testes usam Chromium real com HTTP local. O ambiente gerenciado bloqueia file://, portanto o duplo clique não foi validado aqui. A pasta foi testada por simulação da API, sem operar o seletor nativo. Tela estreita foi testada em Chromium, não em celular físico, Safari ou Firefox.
+47 grupos de testes passaram. Os resultados, as capturas, o GIF e a gravação real da navegação ficam em validacao. Os testes usam Chromium real com HTTP local. O ambiente gerenciado bloqueia file://, portanto o duplo clique não foi validado aqui. A pasta foi testada por simulação da API, sem operar o seletor nativo. Tela estreita foi testada em Chromium, não em celular físico, Safari ou Firefox.
