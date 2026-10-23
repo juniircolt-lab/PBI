@@ -1,0 +1,31 @@
+PASS Inicialização e tabela
+PASS Criar atividade com meia-noite, tags e notas
+PASS Hora customizada e preservação ao reabrir
+PASS Formulário rejeita cronologia e mantém data editável
+PASS Edição inline Enter, Tab, Shift+Tab, Esc e vazio inválido
+PASS Datas inline preservam hora e rejeitam conclusão anterior
+PASS Filtros só aplicam ao confirmar e atualizar tabela/estatísticas
+PASS Cartões arrastar e persistir nos dois sentidos
+PASS Calendário contém início e conclusão
+PASS Prévia isolada, cancelar, aplicar e restaurar
+PASS Backup completo com filtros e importação inválida segura
+PASS Persistência e exclusão
+PASS Tela estreita e captura
+{
+  "checks": [
+    "Inicialização e tabela",
+    "Criar atividade com meia-noite, tags e notas",
+    "Hora customizada e preservação ao reabrir",
+    "Formulário rejeita cronologia e mantém data editável",
+    "Edição inline Enter, Tab, Shift+Tab, Esc e vazio inválido",
+    "Datas inline preservam hora e rejeitam conclusão anterior",
+    "Filtros só aplicam ao confirmar e atualizar tabela/estatísticas",
+    "Cartões arrastar e persistir nos dois sentidos",
+    "Calendário contém início e conclusão",
+    "Prévia isolada, cancelar, aplicar e restaurar",
+    "Backup completo com filtros e importação inválida segura",
+    "Persistência e exclusão",
+    "Tela estreita e captura"
+  ],
+  "errors": []
+}

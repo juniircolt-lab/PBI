@@ -1,0 +1,30 @@
+ÓRBITA — V3 / SEU FLUXO
+
+COMO ABRIR
+Extraia o ZIP inteiro. Abra a pasta Orbita e depois index.html no Chrome ou Edge. Mantenha css e js junto do arquivo HTML.
+
+TRAZER SEUS DADOS
+Exporte um backup completo na versão anterior antes de trocar. Guarde esse JSON. Na nova versão, vá a Assistente e dados > Importar dados e preferências e selecione seu backup. Não há dados pessoais do seu navegador neste pacote.
+
+NOVO VISUAL
+Dashboard com composição editorial, tons escuros, destaque cítrico, tipografia ampla e um gráfico orbital original. Foi usada como referência a estrutura do HTML da Oakley enviado, sem copiar imagens, marca ou scripts do site. O gráfico orbital é local, não depende da internet e mostra a proporção de atividades concluídas.
+
+CRIAR OPÇÕES NA HORA
+Na tabela, use o + ao lado de status, área, projeto ou prioridade. Digite o nome e confirme; a opção fica disponível para todas as atividades e é aplicada à atividade atual. Para status, escolha também a cor e o comportamento.
+Nos cartões, o + junto da prioridade cria e aplica uma nova prioridade. + Novo status adiciona uma coluna. Há atalhos para criar prioridades, áreas e projetos acima dos cartões.
+
+SEU FLUXO
+Use a seção Seu fluxo para cadastrar ou renomear opções. Status também tem cor e comportamento: pendente, em andamento ou concluída. Esses comportamentos definem os indicadores e as datas automáticas. Criar ou selecionar um status de andamento registra início se vazio; conclusão registra conclusão se vazia. Datas existentes não são apagadas nem refeitas ao mudar de status. Cronologia inválida é rejeitada.
+Renomear atualiza suas atividades e filtros salvos. Mudar o comportamento de uma opção não cria datas no passado; os indicadores passam a usar a nova classificação. Uma opção em uso não pode ser excluída: primeiro altere as atividades e filtros que a utilizam.
+
+COMPATIBILIDADE
+Backups antigos são importados, preservando IDs, datas, notas e preferências. As listas personalizadas são guardadas em settings.catalogs, mantendo schemaVersion 1 e a chave local orbita-v1. Depois de usar novas categorias, abra o backup nesta versão ou posterior: versões antigas têm listas fixas e não aceitam todos os nomes personalizados. Exportar/importar um estilo altera apenas aparência, sem substituir suas listas.
+
+OUTROS RECURSOS
+Tabela: Enter/Tab/clique fora salvam; Shift+Tab volta; Esc cancela a edição. Use detalhes para ajustar horários.
+Filtros: Aplicar e fechar confirma; Limpar volta a Tudo. Busca é imediata. Backup completo ignora filtros.
+Personalização: prévia separada; Aplicar salva; Cancelar descarta. Cores dos status são editadas em Seu fluxo.
+Pasta local é opcional, requer reconectar ao reabrir e depende do navegador. Mantenha backups exportados. Não há integração Google Drive nem sincronização com GitHub.
+
+TESTES E LIMITES
+Os resultados e as capturas ficam em validacao. Os testes usam Chromium real com HTTP local. O ambiente gerenciado bloqueia file://, portanto o duplo clique não foi validado aqui. A pasta foi testada por simulação da API, sem operar o seletor nativo. Tela estreita foi testada em Chromium, não em celular físico, Safari ou Firefox.

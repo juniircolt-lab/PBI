@@ -1,0 +1,31 @@
+PASS Dashboard editorial e ilustração local sem recursos remotos
+PASS Novo status no campo da tabela e comportamento de início
+PASS Novas área, prioridade e projeto diretamente na tabela
+PASS Duplicata e cancelamento não alteram dados
+PASS Cartões: nova prioridade no + do cartão e novo status como coluna
+PASS Filtros e formulário aceitam todas as opções novas
+PASS Renomear opções preserva IDs, datas e campos não editados
+PASS Opções em uso são protegidas; criar/excluir opção livre
+PASS Cor e comportamento personalizado de conclusão
+PASS Backup e recarga preservam opções e atividades
+PASS Importação de estilo mantém categorias personalizadas
+PASS Backup antigo migra sem alterar tarefas e mantém opções legadas
+PASS Responsividade do dashboard, tabela, calendário e fluxo
+{
+  "checks": [
+    "Dashboard editorial e ilustração local sem recursos remotos",
+    "Novo status no campo da tabela e comportamento de início",
+    "Novas área, prioridade e projeto diretamente na tabela",
+    "Duplicata e cancelamento não alteram dados",
+    "Cartões: nova prioridade no + do cartão e novo status como coluna",
+    "Filtros e formulário aceitam todas as opções novas",
+    "Renomear opções preserva IDs, datas e campos não editados",
+    "Opções em uso são protegidas; criar/excluir opção livre",
+    "Cor e comportamento personalizado de conclusão",
+    "Backup e recarga preservam opções e atividades",
+    "Importação de estilo mantém categorias personalizadas",
+    "Backup antigo migra sem alterar tarefas e mantém opções legadas",
+    "Responsividade do dashboard, tabela, calendário e fluxo"
+  ],
+  "errors": []
+}

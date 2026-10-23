@@ -1,0 +1,27 @@
+PASS Calendário: UTC perto da meia-noite, datas únicas, +mais, sem data
+PASS Navegação de meses a partir do dia 31
+PASS Arraste inválido e status inline revertem antes de salvar
+PASS Salvar, reabrir, aplicar e limpar filtros com área
+PASS Tema do sistema, horário e prévia representativa
+PASS Importar/exportar estilo sem alterar atividades
+PASS Validação de backup rejeita preferências, filtros e prazo inválidos
+PASS Dashboard: contadores, prazo atrasado e duração corrida
+PASS Pasta: cancelamento e gravação simulada pela API
+PASS Falha na pasta preserva cópia local e mostra aviso
+PASS localStorage indisponível não informa salvamento bem sucedido
+{
+  "checks": [
+    "Calendário: UTC perto da meia-noite, datas únicas, +mais, sem data",
+    "Navegação de meses a partir do dia 31",
+    "Arraste inválido e status inline revertem antes de salvar",
+    "Salvar, reabrir, aplicar e limpar filtros com área",
+    "Tema do sistema, horário e prévia representativa",
+    "Importar/exportar estilo sem alterar atividades",
+    "Validação de backup rejeita preferências, filtros e prazo inválidos",
+    "Dashboard: contadores, prazo atrasado e duração corrida",
+    "Pasta: cancelamento e gravação simulada pela API",
+    "Falha na pasta preserva cópia local e mostra aviso",
+    "localStorage indisponível não informa salvamento bem sucedido"
+  ],
+  "errors": []
+}
